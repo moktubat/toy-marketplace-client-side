@@ -26,10 +26,10 @@ const NavBar = () => {
           <a href="#link" className="mr-8 hover:text-gray-300">
             All Toys
           </a>
-          <a href="#link" className="mr-8 hover:text-gray-300">
+          <a href="blog" className="mr-8 hover:text-gray-300">
             Blog
           </a>
-          <a href="#link" className="mr-8 hover:text-gray-300">
+          <a href="login" className="mr-8 hover:text-gray-300">
             Login
           </a>
         </nav>
