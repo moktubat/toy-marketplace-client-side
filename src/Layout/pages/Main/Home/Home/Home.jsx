@@ -1,11 +1,10 @@
-import Footer from "../../../Shared/Footer";
-import NavBar from "../../../Shared/NavBar";
+import Header from "../../../Header/Header";
+
 
 const Home = () => {
     return (
         <div>
-            <NavBar/>
-            <Footer/>
+            <Header></Header>
         </div>
     );
 };
