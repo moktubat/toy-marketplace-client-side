@@ -64,22 +64,19 @@ const Footer = () => {
             </ul>
           </div>
           <div className="space-y-3">
-            <h3 className="uppercase dark:text-gray-50">Developers</h3>
+            <h3 className="uppercase dark:text-gray-50">Contact</h3>
             <ul className="space-y-1">
               <li>
-                <a rel="noopener noreferrer" href="#">
-                  Public API
-                </a>
+                <address>
+                    House 29, Road 5, Block C, Banasree, Rampura 1219
+                </address>
               </li>
               <li>
-                <a rel="noopener noreferrer" href="#">
-                  Documentation
-                </a>
+              <a href="tel:+8801748935773">+8801748935773</a> <br />
+              <a href="tel:+8801748935774">+8801748935774</a>
               </li>
               <li>
-                <a rel="noopener noreferrer" href="#">
-                  Guides
-                </a>
+              <a href="mailto:shadhin@reja.com">shadhin@reja.com</a>
               </li>
             </ul>
           </div>
