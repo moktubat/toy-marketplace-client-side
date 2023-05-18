@@ -10,7 +10,7 @@ const NavBar = () => {
       <div className="container mx-auto flex justify-between items-center py-7 px-5">
         {/* Site logo and Name */}
         <a
-          href="#link"
+          href="/"
           className="flex flex-shrink-0 title-font font-medium items-center text-gray-900 md:mb-0"
         >
           <img className="w-20 h-20" src={logo} alt="" />
