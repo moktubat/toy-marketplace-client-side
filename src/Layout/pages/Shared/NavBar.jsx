@@ -20,7 +20,7 @@ const NavBar = () => {
         </a>
         {/* Navbar */}
         <nav className="hidden md:ml-auto md:flex flex-wrap items-center justify-center text-base tracking-wide">
-          <a href="#link" className="mr-8 hover:text-gray-300">
+          <a href="/" className="mr-8 hover:text-gray-300">
             Home
           </a>
           <a href="#link" className="mr-8 hover:text-gray-300">

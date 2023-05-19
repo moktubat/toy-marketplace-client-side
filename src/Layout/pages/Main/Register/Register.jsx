@@ -1,6 +1,31 @@
+import { useContext } from "react";
 import register from "../../../../assets/register.jpg";
+import { AuthContext } from "../../../../provider/AuthProvider";
 
 const Register = () => {
+
+    const {createUser} = useContext(AuthContext);
+
+    const handleSignUp = event =>{
+        event.preventDefault();
+        const form = event.target;
+        const name = form.name.value;
+        const email = form.email.value;
+        const image = form.image.value;
+        const password = form.password.value;
+
+        console.log(name, email, image, password);
+
+        createUser(email, password)
+        .then(result => {
+            const user = result.user;
+            console.log(user)
+        })
+        .catch(error => console.log(error))
+    }
+
+
+
   return (
     <div className="hero min-h-screen bg-base-200">
       <div className="hero-content flex-col lg:flex-row">
@@ -23,17 +48,17 @@ const Register = () => {
 
               <div className="w-full h-px bg-gray-300"></div>
             </div>
-            <form action="">
+            <form onSubmit={handleSignUp}>
               <div className="flex">
-                <div className="mb-6">
+                <div className="form-control mb-6">
                   <label
                     className="block mb-1.5 text-sm text-gray-900 font-semibold"
-                    name="name"
                   >
                     Name
                   </label>
                   <input
                     className="w-full py-3 px-4 text-sm text-gray-900 placeholder-gray-400 border border-gray-200 focus:border-purple-500 focus:outline-purple rounded-lg"
+                    name="name"
                     type="text"
                     placeholder="Enter your name"
                   />
@@ -41,12 +66,12 @@ const Register = () => {
                 <div className="mb-6">
                   <label
                     className="block mb-1.5 text-sm text-gray-900 font-semibold"
-                    name="email"
                   >
                     Email
                   </label>
                   <input
                     className="w-full py-3 px-4 text-sm text-gray-900 placeholder-gray-400 border border-gray-200 focus:border-purple-500 focus:outline-purple rounded-lg"
+                    name="email"
                     type="email"
                     placeholder="Enter your email"
                   />
@@ -56,13 +81,13 @@ const Register = () => {
                 <div className="mb-6">
                   <label
                     className="block mb-1.5 text-sm text-gray-900 font-semibold"
-                    name="image"
                   >
                     Image
                   </label>
                   <input
                     className="w-full py-3 px-4 text-sm text-gray-900 placeholder-gray-400 border border-gray-200 focus:border-purple-500 focus:outline-purple rounded-lg"
-                    type="email"
+                    name="image"
+                    type="text"
                     placeholder="Enter your image url"
                   />
                 </div>
@@ -70,7 +95,6 @@ const Register = () => {
                   <div className="flex mb-1.5 items-center justify-between">
                     <label
                       className="block text-sm text-gray-900 font-semibold"
-                      name="password"
                     >
                       Password
                     </label>
@@ -78,6 +102,7 @@ const Register = () => {
                   <div className="relative">
                     <input
                       className="w-full py-3 px-4 text-sm text-gray-900 placeholder-gray-400 border border-gray-200 focus:border-purple-500 focus:outline-purple rounded-lg"
+                      name="password"
                       type="password"
                       placeholder="Enter your password"
                     />
@@ -89,9 +114,11 @@ const Register = () => {
                 type="submit"
               >
                 <div className="absolute top-0 right-full w-full h-full bg-gray-900 transform group-hover:translate-x-full group-hover:scale-102 transition duration-500"></div>
-                <span className="relative">Register</span>
+                <span className="relative">SIGN UP</span>
               </button>
-              <span className="text-xs font-semibold text-gray-900">
+              
+            </form>
+            <span className="text-xs font-semibold text-gray-900">
                 <span>Already have an account.</span>
                 <a
                   className="ml-1 inline-block text-orange-900 hover:text-orange-700"
@@ -100,7 +127,6 @@ const Register = () => {
                   Sign In
                 </a>
               </span>
-            </form>
           </div>
         </div>
       </div>
