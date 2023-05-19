@@ -5,7 +5,7 @@ const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className="w-full bg-gray-800 text-gray-100 body-font mb-4 shadow-sm">
+    <header className="w-full bg-[#66347F] text-gray-100 body-font mb-4 shadow-sm">
       {/* :DESKTOP MENU */}
       <div className="container mx-auto flex justify-between items-center py-7 px-5">
         {/* Site logo and Name */}
