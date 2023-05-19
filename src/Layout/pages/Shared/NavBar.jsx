@@ -1,7 +1,15 @@
-import { useState } from "react";
-import logo from '../../../assets/logo2.png'
+import { useContext, useState } from "react";
+import logo from "../../../assets/logo2.png";
+import { AuthContext } from "../../../provider/AuthProvider";
 
 const NavBar = () => {
+  const { user, logOut } = useContext(AuthContext);
+  const handleLogOut = () => {
+    logOut()
+      .then(() => {})
+      .catch((error) => console.log(error));
+  };
+
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -20,21 +28,40 @@ const NavBar = () => {
         </a>
         {/* Navbar */}
         <nav className="hidden md:ml-auto md:flex flex-wrap items-center justify-center text-base tracking-wide">
-          <a href="/" className="mr-8 hover:text-gray-300">
-            Home
-          </a>
-          <a href="#link" className="mr-8 hover:text-gray-300">
-            All Toys
-          </a>
-          <a href="blog" className="mr-8 hover:text-gray-300">
-            Blog
-          </a>
-          <a href="login" className="mr-8 hover:text-gray-300">
-            Login
-          </a>
+          <li className="list-none">
+            <a href="/" className="mr-8 hover:text-gray-300">
+              Home
+            </a>
+          </li>
+          <li className="list-none">
+            <a href="#link" className="mr-8 hover:text-gray-300">
+              All Toys
+            </a>
+          </li>
+          <li className="list-none">
+            <a href="blog" className="mr-8 hover:text-gray-300">
+              Blog
+            </a>
+          </li>
+          {user?.email ? (
+            <li className="list-none">
+              <a
+                href="login"
+                onClick={handleLogOut}
+                className="mr-8 hover:text-gray-300"
+              >
+                Log out
+              </a>
+            </li>
+          ) : (
+            <li className="list-none">
+              <a href="login" className="mr-8 hover:text-gray-300">
+                Login
+              </a>
+            </li>
+          )}
         </nav>
 
-        
         {/* Burger icon standard */}
         <button
           className="md:hidden rounded-md active:outline-none focus:outline-none focus:ring-2 focus:ring-inset focus:ring-yellow-500"
