@@ -1,4 +1,13 @@
+import Aos from 'aos';
+import 'aos/dist/aos.css';
+import { useEffect } from 'react';
+
 const Gallery = () => {
+
+  useEffect(() => {
+    Aos.init({duration: 2000});
+  }, [])
+
   return (
     <div>
       <h1 className="text-center font-bold py-10 text-3xl dark:text-white">
@@ -7,7 +16,7 @@ const Gallery = () => {
 
       <div className="container lg:px-32 px-4 py-8 mx-auto items-center ">
         <div className="grid grid-cols-4 grid-rows-4 grid-flow-col gap-2">
-          <div className="w-full row-span-2">
+          <div className="w-full row-span-2" data-aos = 'fade-right'>
             <img
               src="https://images.brickset.com/news/73742_Panther%202A.jpg"
               alt="Photo by Claudio Schwarz on Unsplash"
