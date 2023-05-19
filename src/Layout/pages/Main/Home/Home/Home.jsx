@@ -1,6 +1,7 @@
-import Chart from "../../../Chart/Chart";
 import Gallery from "../../../Gallery/Gallery";
 import Header from "../../../Header/Header";
+import Partner from "../../../Partner/Partner";
+import Team from "../../../Team/Team";
 import ToyCategory from "../../../ToyCategory/ToyCategory";
 
 
@@ -10,7 +11,8 @@ const Home = () => {
             <Header></Header>
             <Gallery></Gallery>
             <ToyCategory></ToyCategory>
-            <Chart></Chart>
+            <Team></Team>
+            <Partner></Partner>
         </div>
     );
 };

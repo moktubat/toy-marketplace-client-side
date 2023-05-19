@@ -51,7 +51,7 @@ const Register = () => {
             <form onSubmit={handleSignUp}>
               <div className="flex">
                 <div className="form-control mb-6">
-                  <label
+                  <label 
                     className="block mb-1.5 text-sm text-gray-900 font-semibold"
                   >
                     Name
