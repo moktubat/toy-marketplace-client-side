@@ -1,8 +1,28 @@
+import { useEffect, useState } from "react";
 import ReactDOM from "react-dom";
 import { Tab, TabList, TabPanel, Tabs } from "react-tabs";
 import "react-tabs/style/react-tabs.css";
 
 const ToyCategory = () => {
+
+  const [legos, setLegos] = useState([]);
+  const [activeTab, setActiveTab] = useState("marvel");
+
+  const handleTabClick = (tabName) => {
+    setActiveTab(tabName);
+  };
+
+  useEffect(() => {
+    fetch('http://localhost:5000/allData')
+    .then((res) => res.json)
+    .then((result) => {
+      setLegos(result);
+    })
+  }, []);
+
+  // const result = legos?.filter((lego) => lego.sub_category == activeTab);
+  // console.log(result);
+
   return (
     <Tabs forceRenderTabPanel defaultIndex={1}>
       <TabList>
