@@ -34,7 +34,7 @@ const NavBar = () => {
             </a>
           </li>
           <li className="list-none">
-            <a href="#link" className="mr-8 hover:text-gray-300">
+            <a href="allToy" className="mr-8 hover:text-gray-300">
               All Toys
             </a>
           </li>
