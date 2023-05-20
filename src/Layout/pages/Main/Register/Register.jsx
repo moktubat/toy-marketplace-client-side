@@ -1,11 +1,12 @@
 import { useContext } from "react";
 import register from "../../../../assets/register.jpg";
 import { AuthContext } from "../../../../provider/AuthProvider";
+import useTitle from "../../../../hooks/useTitel";
 
 const Register = () => {
 
     const {createUser} = useContext(AuthContext);
-
+    useTitle("Register");
     const handleSignUp = event =>{
         event.preventDefault();
         const form = event.target;

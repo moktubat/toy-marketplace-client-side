@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import LegosData from "./LegosData/LegosData";
+import useTitle from "../../../hooks/useTitel";
 
 const AllToy = () => {
+  useTitle("All Legos Toys")
   const [legosData, setLegosData] = useState([]);
   const handleViewDetails = (lego) => {
     setLegosData(lego);

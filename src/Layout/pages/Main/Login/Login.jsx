@@ -3,8 +3,10 @@ import Background from "../../../../assets/login.jpg";
 import { AuthContext } from "../../../../provider/AuthProvider";
 import { GoogleAuthProvider, getAuth, signInWithPopup } from "firebase/auth";
 import app from "../../../../firebase/firebase.config";
+import useTitle from "../../../../hooks/useTitel";
 
 const Login = () => {
+  useTitle("Login")
   const { signIn } = useContext(AuthContext);
 
   const [user, setUser] = useState(null);

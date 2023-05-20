@@ -1,6 +1,8 @@
 import React from "react";
+import useTitle from "../../../hooks/useTitel";
 
 const Blog = () => {
+  useTitle("Blog");
   return (
     <div className="grid  place-items-center pb-4">
       <div className="collapse grid  place-items-center w-3/5 rounded">
