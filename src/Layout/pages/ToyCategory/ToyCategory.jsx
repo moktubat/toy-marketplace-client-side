@@ -79,9 +79,7 @@ const ToyCategory = () => {
                     <p>Price: $ {ml.price}</p>
                     <p>Rating: {ml.rating}</p>
                     <div className="card-actions">
-                      <button className="btn btn-primary w-full">
-                        View Details
-                      </button>
+                      <a href={`marvel/${ml._id}`} className="btn bg-[#7A3E3E] hover:bg-[#643A6B] w-full">View Details</a>
                     </div>
                   </div>
                 </div>
@@ -103,9 +101,7 @@ const ToyCategory = () => {
                     <p>Price: $ {dl.price}</p>
                     <p>Rating: {dl.rating}</p>
                     <div className="card-actions">
-                      <button className="btn btn-primary w-full">
-                        View Details
-                      </button>
+                    <a href={`DcComics/${dl._id}`} className="btn bg-[#7A3E3E] hover:bg-[#643A6B] w-full">View Details</a>
                     </div>
                   </div>
                 </div>
@@ -127,9 +123,7 @@ const ToyCategory = () => {
                     <p>Price: $ {sl.price}</p>
                     <p>Rating: {sl.rating}</p>
                     <div className="card-actions">
-                      <button className="btn btn-primary w-full">
-                        View Details
-                      </button>
+                    <a href={`starWars/${sl._id}`} className="btn bg-[#7A3E3E] hover:bg-[#643A6B] w-full">View Details</a>
                     </div>
                   </div>
                 </div>
@@ -151,9 +145,7 @@ const ToyCategory = () => {
                     <p>Price: $ {tl.price}</p>
                     <p>Rating: {tl.rating}</p>
                     <div className="card-actions">
-                      <button className="btn btn-primary w-full">
-                        View Details
-                      </button>
+                    <a href={`transformers/${tl._id}`} className="btn bg-[#7A3E3E] hover:bg-[#643A6B] w-full">View Details</a>
                     </div>
                   </div>
                 </div>

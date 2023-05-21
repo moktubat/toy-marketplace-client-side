@@ -65,7 +65,7 @@ const AllToy = () => {
               </thead>
               <tbody>
                 {legosData.map((lego, index) => (
-                  <tr key={index} className="border-b dark:border-neutral-500">
+                  <tr key={index} className="border-b dark:border-neutral-500 text-base font-bold">
                     <td className="whitespace-nowrap border-r px-6 py-4 dark:border-neutral-500">
                       {lego.sellerName}
                     </td>
@@ -83,8 +83,8 @@ const AllToy = () => {
                     </td>
                     <td className="whitespace-nowrap border-r px-6 py-4 dark:border-neutral-500">
                       <a
-                        href="#"
-                        class="px-6 py-3 text-blue-100 no-underline bg-blue-500 rounded hover:bg-blue-600 hover:underline hover:text-blue-200"
+                        // href={`legoData/${_id}`}
+                        class="px-6 py-3 text-blue-100 no-underline rounded bg-[#7A3E3E] hover:bg-[#643A6B] hover:underline"
                       >
                         View Details
                       </a>

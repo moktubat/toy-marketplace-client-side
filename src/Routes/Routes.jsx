@@ -6,6 +6,7 @@ import Register from "../Layout/pages/Main/Register/Register";
 import ErrorPage from "../Layout/pages/ErrorPage/ErrorPage";
 import Blog from "../Layout/pages/Blog/Blog";
 import AllToy from "../Layout/pages/AllToy/AllToy";
+import LegosData from "../Layout/pages/AllToy/LegosData/LegosData";
 
 const router = createBrowserRouter([
     {
@@ -32,6 +33,10 @@ const router = createBrowserRouter([
         {
           path: '/allToy',
           element: <AllToy></AllToy>
+        },
+        {
+          path: '/legosData',
+          element: <LegosData></LegosData>
         }
       ]
     },

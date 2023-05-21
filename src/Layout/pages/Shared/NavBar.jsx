@@ -13,7 +13,7 @@ const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className="w-full bg-[#66347F] text-gray-100 body-font mb-4 shadow-sm">
+    <header className="w-full bg-[#66347F]text-gray-100 body-font mb-4 shadow-sm">
       {/* :DESKTOP MENU */}
       <div className="container mx-auto flex justify-between items-center py-7 px-5">
         {/* Site logo and Name */}
@@ -44,26 +44,15 @@ const NavBar = () => {
             </a>
           </li>
           {user?.email ? (
-            <>
             <li className="list-none">
               <a
-                href="myToy"
-                onClick={handleLogOut}
-                className="mr-8 hover:text-gray-300"
-              >
-                My Toy
-              </a>
-            </li>
-            <li className="list-none">
-              <a
-                href="login"
+                href="/"
                 onClick={handleLogOut}
                 className="mr-8 hover:text-gray-300"
               >
                 Log out
               </a>
             </li>
-            </>
           ) : (
             <li className="list-none">
               <a href="login" className="mr-8 hover:text-gray-300">
