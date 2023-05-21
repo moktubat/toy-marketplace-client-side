@@ -9,7 +9,7 @@ const AllToy = () => {
     setLegosData(lego);
   };
 
-  fetch("http://localhost:5000/allData")
+  fetch("https://toy-marketplace-server-side-moktubat.vercel.app/allData")
     .then((res) => res.json())
     .then((data) => setLegosData(data));
   console.log(legosData);

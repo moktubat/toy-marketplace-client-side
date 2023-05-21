@@ -10,7 +10,7 @@ const ToyCategory = () => {
   const [transformersLego, setTransformersLego] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/marvel")
+    fetch("https://toy-marketplace-server-side-moktubat.vercel.app/marvel")
       .then((res) => res.json())
       .then((result) => {
         setMarvelLego(result);
@@ -18,7 +18,7 @@ const ToyCategory = () => {
   }, []);
 
   useEffect(() => {
-    fetch("http://localhost:5000/DcComics")
+    fetch("https://toy-marketplace-server-side-moktubat.vercel.app/DcComics")
       .then((res) => res.json())
       .then((result) => {
         setDCLego(result);
@@ -26,7 +26,7 @@ const ToyCategory = () => {
   }, []);
 
   useEffect(() => {
-    fetch("http://localhost:5000/starWars")
+    fetch("https://toy-marketplace-server-side-moktubat.vercel.app/starWars")
       .then((res) => res.json())
       .then((result) => {
         setStarWarsLego(result);
@@ -34,7 +34,7 @@ const ToyCategory = () => {
   }, []);
 
   useEffect(() => {
-    fetch("http://localhost:5000/transformers")
+    fetch("https://toy-marketplace-server-side-moktubat.vercel.app/transformers")
       .then((res) => res.json())
       .then((result) => {
         setTransformersLego(result);
