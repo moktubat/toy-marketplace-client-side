@@ -44,6 +44,16 @@ const NavBar = () => {
             </a>
           </li>
           {user?.email ? (
+            <>
+            <li className="list-none">
+              <a
+                href="myToy"
+                onClick={handleLogOut}
+                className="mr-8 hover:text-gray-300"
+              >
+                My Toy
+              </a>
+            </li>
             <li className="list-none">
               <a
                 href="login"
@@ -53,6 +63,7 @@ const NavBar = () => {
                 Log out
               </a>
             </li>
+            </>
           ) : (
             <li className="list-none">
               <a href="login" className="mr-8 hover:text-gray-300">

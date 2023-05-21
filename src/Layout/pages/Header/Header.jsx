@@ -13,15 +13,13 @@ const Header = () => {
             <div className="p-5 flex flex-col justify-center items-center lg:items-start text-center lg:text-left">
               {/* Hero Title */}
               <h1 className="py-10 text-3xl sm:text-5xl font-bold tracking-wide text-gray-900">
-                Effortless, <br />
-                fancy hero 12, <br />
-                made with love.
+              Discover the fascinating<br />LEGO manifested in the<br /> ultimate LEGO building
               </h1>
               {/* Starting Price */}
               <p className="text-lg font-semibold text-gray-400 tracking-wide">
                 Get your favourite LEGO® toys,
                 <br />
-                LEGOLAND® Exclusive merchandise and
+                LEGOVILLA® Exclusive merchandise and
                 <br /> much more at our LEGOVILLA® Retail Store!
               </p>
               {/* Buttons */}
